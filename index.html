@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fardan Arsitek Dan Hitung Struktur</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.discount-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    background-color: #ffd700;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.intro {
+    text-align: center;
+    padding: 20px;
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+}
+
+.features li {
+    background-color: #ffd700;
+    margin: 5px 0;
+    padding: 10px;
+}
+
+.portfolio {
+    text-align: center;
+}
+
+.portfolio-images {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="discount-banner">
+            <p>Diskon 50% Khusus Hari Ini</p>
+            <div id="countdown">03 Jam 10 Menit 06 Detik</div>
+            <button onclick="startConsultation()">Konsultasi</button>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <section class="intro">
+            <h1>Fardan Arsitek Dan Hitung Struktur</h1>
+            <p>Kami adalah tim arsitek berbakat yang berdedikasi untuk menciptakan desain arsitektur yang unik dan menginspirasi.</p>
+            <ul class="features">
+                <li>Desain Unik dan Kustom</li>
+                <li>Tim Profesional Berpengalaman</li>
+                <li>Proses Transparan dan Terstruktur</li>
+                <li>Teknologi Canggih</li>
+                <li>Fleksibilitas Lokasi</li>
+                <li>Bersertifikasi</li>
+            </ul>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section class="portfolio">
+            <h2>Portfolio Terbaru Kami</h2>
+            <h3>Eksterior</h3>
+            <div class="portfolio-images">
+                <img width="250px" src="R5 06112024 - INT - KAMAR MANDI LT.2 - BAPAK KUKUH 5.png" alt="Exterior Design 1">
+                <img width="250px" src="R6 05112024 - EKS - RUMAH TINGGAL 1 LANTAI - KAK ANDY - PALU_TAMPAK PERSPEKTIF (3).jpg" alt="Exterior Design 2">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="https://wa.me/6283846342652" class="whatsapp-btn">Konsultasi Online</a>
+    </footer>
+
+    <script>
+// Countdown Timer Logic
+function startCountdown() {
+    const countdownElement = document.getElementById("countdown");
+    let time = 3 * 60 * 60; // 3 hours in seconds
+
+    const timer = setInterval(() => {
+        const hours = Math.floor(time / 3600);
+        const minutes = Math.floor((time % 3600) / 60);
+        const seconds = time % 60;
+
+        countdownElement.textContent = `${hours.toString().padStart(2, '0')} Jam ${minutes.toString().padStart(2, '0')} Menit ${seconds.toString().padStart(2, '0')} Detik`;
+
+        if (time > 0) {
+            time--;
+        } else {
+            clearInterval(timer);
+        }
+    }, 1000);
+}
+
+// Initiate the countdown when the page loads
+window.onload = startCountdown;
+
+function startConsultation() {
+    window.location.href = "https://wa.me/yourwhatsappnumber";
+}
+
+</script>
+</body>
+</html>
